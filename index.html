@@ -3,17 +3,25 @@
 <head>  
     <meta charset="UTF-8">
     
-    <title>Document</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1" />    
+     <meta name="author" content="Paweł Grabowski">
+    <meta name="description" content="150 znaków opisu, który pozwoli znaleźć firmę w internecie. Opis pokazywany jest w przeglądarce, słowa z opisu powinny znajdować się w tekscie, wyróżnione w jakiś sposób, nagłowkami lub znaczniekiem strong">
+    
+    <title>Junior Front-end Developer</title>
+    
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Mogra" rel="stylesheet">
 </head>
 <body>
   <div class="background"></div>
 
 <div class="content">
- <h1>POSZUKIWANY</h1>
+ <div class="header">
+     <p>POSZUKIWANY</p>
+ </div>
  <div class="information">
-    <div class="who info"><div class="front">KTO?</div>
+    <div class="info"><div class="front">KTO?</div>
         <div class="back">Młody i zdolny JUNIOR FRONT-END DEVELOPER</div>
     </div>
     <div class="place info"><div class="front">GDZIE?</div>
@@ -22,15 +30,22 @@
     
     <div class="expectations info">
         <div class="front"> CO POWINIENIEŚ ZNAĆ?</div>
-        <div class="back"><div class="backInside"><i class="fa fa-html5" aria-hidden="true"></i> oraz <i class="fa fa-css3" aria-hidden="true"></i> to podstawa. Bez tego nie masz czego szukać.</div></div>       
+        <div class="back"><div class="backInside">Podstawa to <i class="fa fa-html5" aria-hidden="true"></i> oraz <i class="fa fa-css3" aria-hidden="true"></i> . Bez tego nie masz czego szukać.</div></div>       
     </div>
     <div class="who info"><div class="front">NAPISZ DO NAS</div>
         <div class="back">
-            <input type="text">
-            <button type="button">Wyślij</button>
+          
+           <p>KONTAKT</p>
+          <div class="inputs">
+            <input  type="email" name="email" placeholder="Twój e-mail*" class="email">
+             <textarea name="message" placeholder="Twoja wiadomość*" maxlength="500"></textarea>
+            <button type="button" id="button2">Wyślij</button>
+            <a href="http://www.ansta.pl/kariera" target="_blank">www.ansta.pl/kariera</a>
+            </div>
         </div>
     </div>
  </div>
 </div>
+<script src="script/skrytp.js"></script>
 </body>
 </html>

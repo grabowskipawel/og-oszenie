@@ -1,41 +1,44 @@
-body{
+
+@media(min-width: 781px){
+    
+    body{
     margin: 0;
     padding: 0;
     background-image: url("/img/gd.jpg");
-    background-size: cover;
-    overflow: hidden;
+    background-size: cover;    
     display: flex;
     align-content: center;
     justify-content: center;
+        font-family: 'Mogra', cursive;
 }
+  
 .content {
-    box-sizing: border-box;
+    
     display: flex;
        flex-direction: column;
    justify-content: flex-start;
     align-content: center;
   align-items: center;
  padding: 15px;
-    width: 75vw;
-    height: 100vh;
-    border:2px solid;
-    
-    position: fixed;
-   
+    width: 85vw;    
+    border:2px solid;  
     z-index:10;
     background-color: rgba(168, 235, 255, 0.2);
+
     /*filter: blur(2px); 
 -moz-filter: blur(2px);
 -o-filter: blur(2px); 
 -ms-filter: blur(2px);*/
 }
-.content h1{
+.header p{
     letter-spacing: 5px;
+    font-size: 55px;
+ 
 }
 .background {
     
     width:100vw;
-    height:110vh;
+    height:100vh;
     background-image:url('/img/gd.jpg');
     z-index:2;
     position:fixed;
@@ -46,6 +49,241 @@ body{
     /*-webkit-filter: blur(2px);*/
 }
 
+
+
+.info:nth-child(odd):hover{
+      transform: rotateY(180deg);
+       background-color: rgba(238, 89, 17,0.75);
+   box-shadow: 0px 52px 80px -9px rgba(0,0,0,0.75);
+    
+}
+.info:nth-child(even):hover{
+      transform: rotateY(180deg);
+        background-color: rgba(100,100,100,0.5);
+    box-shadow: 0px 52px 80px -9px rgba(0,0,0,0.75);
+    
+}
+
+
+.front, .back{
+    backface-visibility: hidden;
+    position: absolute;
+	
+	
+}
+.front {
+    display: flex;
+    justify-content: center;
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    
+}
+.info{
+     box-shadow: 2px 2px 3px black ;
+    margin: 10px 0px;
+    padding: 25px;
+    background-color: rgba(255,255,255,0.5);
+   box-shadow:  -3px 7px 29px 1px rgba(0,0,0,0.38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 9vh;
+    perspective: 1500px;
+    font-size: 25px;
+	transition: 0.8s;
+    transform-style: preserve-3d;
+}
+.info:nth-child(odd){
+    
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.info:nth-child(even){
+    
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.backInside{
+    padding: 10px;
+}
+i{
+    color: white;
+}
+  
+   
+   input:focus{
+        background-color: rgb(117, 179, 223);
+       
+        
+    }
+    textarea:focus{
+        background-color:rgb(117, 179, 223);
+          
+    }
+    .inputs{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px;
+        padding: 5px;
+  
+    }
+    
+     .inputs a{
+        text-decoration: none;
+        color: black''
+    }
+    .inputs a:hover{
+        cursor: pointer;
+    }
+    .inputs a:visited{
+        color:  rgb(0,0,0);
+        
+    }
+     input{
+         margin-left: 0px;        
+       
+        border-radius: 5px;
+        margin-bottom: 5px;
+        border: none;
+        box-sizing: border-box;
+         
+    }
+   
+    p{
+        margin: 0px;
+        padding: 0px;            
+    }
+    .who p{
+        margin-top: 5px;
+    }
+  
+    .who{
+        height: 23vh;
+    }
+
+    .email{
+        width: 45vh;
+         font-size:15px; 
+        font-family: monospace;
+    }
+    .text{
+        height: 8vh;
+        width: 45vh;
+        font-size:15px; 
+        font-family: monospace;
+        text-align: left;
+        margin: 0px;
+    }
+     textarea{
+         resize: none;
+  height: 8vh;
+        width: 45vh;
+        font-size:15px; 
+        font-family: monospace;
+        text-align: left;
+        
+         border-radius: 5px;
+    }
+    button{
+        border-radius: 5px;
+        background-color: ;
+        margin: 5px;
+       background-color: rgba(238, 89, 17,0.75);
+        border: 0px;
+    
+        font-size: 18px;
+        text-transform: uppercase;
+        transition: 0.5s linear;
+    }
+    button:hover{
+        cursor: pointer;
+        box-shadow: 1px 2px 10px black;
+    }
+} /* end of min 480px*/
+
+
+
+
+@media(min-width : 80px) and (max-width: 780px) {
+    body{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+          background-image: url("/img/gd.jpg");
+    background-size: cover; 
+    display: flex;
+    align-content: center;
+    justify-content: center;
+        font-family: 'Mogra', cursive;
+}
+.content {
+   
+    display: flex;
+       flex-direction: column;
+   justify-content: flex-start;
+    align-content: center;
+  align-items: center;
+ padding: 15px;
+    width: 85vw;
+  
+    border:2px solid;  
+
+   
+    z-index:10;
+    background-color: rgba(168, 235, 255, 0.2);
+    /*filter: blur(2px); 
+-moz-filter: blur(2px);
+-o-filter: blur(2px); 
+-ms-filter: blur(2px);*/
+}
+    .header p{
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+.background {
+    
+    width:100vw;
+    height:150vh;
+  
+        background-image: url("/img/gd.jpg");
+    z-index:2;
+    position:fixed;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  filter: blur(2px);
+    /*-webkit-filter: blur(2px);*/
+}
+.info{
+     box-shadow: 2px 2px 3px black ;
+    margin: 10px 0px;
+    padding: 25px;
+    background-color: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    height: 15vh;
+    perspective: 1000px;
+        box-sizing: 100vh;
+	transition: 0.8s;
+    transform-style: preserve-3d;
+}
 
 .info:hover{
     transform: rotateY(180deg);
@@ -79,24 +317,17 @@ body{
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
-    
-    
-}
-.info{
-     box-shadow: 2px 2px 3px black ;
-    margin: 10px 0px;
-    padding: 25px;
-    background-color: rgba(255,255,255,0.5);
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 35vw;
-    height: 10vh;
-    perspective: 1000px;
-        
-	transition: 0.8s;
-    transform-style: preserve-3d;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    
 }
+
+
 .info:nth-child(odd){
     
     border-bottom-right-radius: 20px;
@@ -112,4 +343,98 @@ body{
 }
 i{
     color: white;
+}
+          input,input::-webkit-input-placeholder {
+        font-size: 15px;
+        padding: 2px;
+        margin: 2px;
+          border: none;
+       
+    }
+   
+   input:focus{
+        background-color: rgb(117, 179, 223);
+       
+        
+    }
+    textarea:focus{
+        background-color:rgb(117, 179, 223);
+          
+    }
+    .inputs{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px;
+        padding: 5px;
+  
+    }
+    .inputs a{
+        text-decoration: none;
+        color: black''
+    }
+    .inputs a:hover{
+        cursor: pointer;
+    }
+   .inputs a:visited{
+        color:  rgb(0,0,0);
+        
+    }
+    p{
+        margin: 0px;
+        padding: 0px;            
+    }
+    
+     input{
+         margin-left: 0px;        
+      
+        border-radius: 5px;
+      margin-bottom: 5px;
+        border: none;
+        box-sizing: border-box;
+         
+    }
+   
+    p{
+        margin: 0px;
+        padding: 0px;            
+    }
+  
+    .who{
+        height: 22vh;
+    }
+
+    .email{
+        width: 45vh;
+         font-size:15px; 
+        font-family: monospace;
+    }
+ 
+     textarea{
+         border-radius: 5px;
+         resize: none;
+         height: 8vh;
+        width: 45vh;
+        font-size:15px; 
+        font-family: monospace;
+        text-align: left;
+        margin: 0px;
+         margin-bottom: 5px;
+          padding: 2px;
+        margin: 2px;
+    }
+    button{
+        border-radius: 5px;
+        background-color: ;
+        margin: 5px;
+       background-color: rgba(238, 89, 17,0.75);
+        border: 0px;
+    
+        font-size: 18px;
+        text-transform: uppercase;
+        transition: 0.5s linear;
+    }
+    button:hover{
+        box-shadow: 1px 2px 10px black;
+    }
 }
